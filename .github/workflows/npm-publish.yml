@@ -38,11 +38,3 @@ jobs:
 
       - name: Install Expo CLI
         run: npm install -g expo-cli
-
-      - name: Login to Expo
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-        run: expo login --token $EXPO_TOKEN
-
-      - name: Run Expo build
-        run: eas build --platform android --profile preview
